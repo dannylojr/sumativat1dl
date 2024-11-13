@@ -1,1 +1,9 @@
-<p>container works!</p>
+<div class="container">
+    <h1>Container Component</h1>
+    <app-btn-primario (click)="changeColor()"></app-btn-primario>
+    <app-btn-secundario (sizeChange)="incrementSize()"></app-btn-secundario>
+    
+    <div *ngIf="currentColor" class="visualizador">
+      <app-visualizador [color]="currentColor" [size]="size"></app-visualizador> <!-- Pasar el color y el tamaño al visualizador -->
+    </div>
+  </div>

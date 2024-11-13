@@ -1,0 +1,7 @@
+.visualizador-content {
+    border: 1px solid black; /* Borde para visualizar el cuadrado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s, height 0.3s; /* Suavizar el cambio de tamaño */
+  }
