@@ -1,9 +1,19 @@
-<div class="container">
-    <h1>Container Component</h1>
-    <app-btn-primario (click)="changeColor()"></app-btn-primario>
-    <app-btn-secundario (sizeChange)="incrementSize()"></app-btn-secundario>
+<div>
+  <h2>Formulario de Entrada</h2>
+  <form (ngSubmit)="onSubmit()">
+    <app-email (emailChange)="onEmailChange($event)"></app-email>
+    <app-password (passwordChange)="onPasswordChange($event)"></app-password>
+    <app-text (textChange)="onTextChange($event)"></app-text>
     
-    <div *ngIf="currentColor" class="visualizador">
-      <app-visualizador [color]="currentColor" [size]="size"></app-visualizador> <!-- Pasar el color y el tamaño al visualizador -->
-    </div>
+    <app-btn-primario (click)="changeColor()">Cambiar Color</app-btn-primario>
+    <app-btn-secundario (click)="incrementSize()">Cambiar Tamaño</app-btn-secundario>
+    
+    <button type="submit">Enviar</button>
+  </form>
+  
+  <div *ngIf="errorMessage" style="color: red;">
+    {{ errorMessage }}
   </div>
+</div>
+
+<app-visualizador [color]="currentColor" [size]="size"></app-visualizador>

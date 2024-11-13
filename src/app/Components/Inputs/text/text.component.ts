@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-text',
   standalone: true,
-  imports: [],
   templateUrl: './text.component.html',
-  styleUrl: './text.component.css'
+  styleUrls: ['./text.component.css']
 })
 export class TextComponent {
+  @Output() textChange = new EventEmitter<string>();
+  text: string = '';
 
+  onTextInput(event: Event): void {
+    this.text = (event.target as HTMLInputElement).value;
+    this.textChange.emit(this.text);
+  }
 }

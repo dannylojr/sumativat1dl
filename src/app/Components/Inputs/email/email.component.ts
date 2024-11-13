@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-email',
   standalone: true,
-  imports: [],
   templateUrl: './email.component.html',
-  styleUrl: './email.component.css'
+  styleUrls: ['./email.component.css']
 })
 export class EmailComponent {
+  @Output() emailChange = new EventEmitter<string>();
+  email: string = '';
 
+  onEmailInput(event: Event): void {
+    this.email = (event.target as HTMLInputElement).value;
+    this.emailChange.emit(this.email);
+  }
 }
