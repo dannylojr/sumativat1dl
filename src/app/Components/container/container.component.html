@@ -1,19 +1,40 @@
-<div>
-  <h2>Formulario de Entrada</h2>
-  <form (ngSubmit)="onSubmit()">
-    <app-email (emailChange)="onEmailChange($event)"></app-email>
-    <app-password (passwordChange)="onPasswordChange($event)"></app-password>
-    <app-text (textChange)="onTextChange($event)"></app-text>
-    
-    <app-btn-primario (click)="changeColor()">Cambiar Color</app-btn-primario>
-    <app-btn-secundario (click)="incrementSize()">Cambiar Tamaño</app-btn-secundario>
-    
-    <button type="submit">Enviar</button>
-  </form>
-  
-  <div *ngIf="errorMessage" style="color: red;">
-    {{ errorMessage }}
+<!-- src/app/Components/container/container.component.html -->
+<div class="main-container">
+  <div class="left-panel">
+    <div class="output-info">
+      <h3>Salida</h3>
+      <p>Email: {{ email }}</p>
+      <p>Password: {{ password }}</p>
+      <p>Text: {{ text }}</p>
+    </div>
+    <div class="visualizador-container">
+      <app-visualizador
+        [color]="currentColor" 
+        [size]="size">
+      </app-visualizador>
+      <div>{{ visualizadorMensaje }}</div> <!-- Mostrar el mensaje -->
+    </div>
+  </div>
+
+  <div class="right-panel">
+    <div class="button-group">
+      <app-btn-primario (click)="onChangeColorClick()">Cambiar Color</app-btn-primario>
+      <app-btn-secundario (click)="incrementSize()">Cambiar Tamaño</app-btn-secundario>
+    </div>
+
+    <div class="input-group">
+      <app-email (emailChange)="onEmailChange($event)"></app-email>
+      <app-password (passwordChange)="onPasswordChange($event)"></app-password>
+      <app-text (textChange)="onTextChange($event)"></app-text>
+    </div>
+
+    <div class="button-group">
+      <app-btn-aceptar (click)="onAceptarClick()"></app-btn-aceptar>
+      <app-btn-cancelar (click)="onCancelarClick()"></app-btn-cancelar>  
+    </div>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
   </div>
 </div>
-
-<app-visualizador [color]="currentColor" [size]="size"></app-visualizador>

@@ -1,0 +1,39 @@
+/* src/app/Components/container/container.component.css */
+.main-container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los paneles */
+    padding: 20px;
+  }
+  
+  .left-panel, .right-panel {
+    flex: 1; /* Cada panel ocupa la mitad del contenedor */
+    margin: 10px; /* Espacio entre los paneles */
+  }
+  
+  .output-info {
+    margin-bottom: 20px; /* Espacio debajo de la salida */
+  }
+  
+  .visualizador-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar el cuadrado */
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre los campos de entrada */
+    margin-bottom: 20px; /* Espacio debajo de los campos de entrada */
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    margin-bottom: 20px; /* Espacio debajo de los botones */
+  }
+  
+  .error-message {
+    color: red; /* Estilo para el mensaje de error */
+    margin-top: 10px; /* Espacio encima del mensaje de error */
+  }
