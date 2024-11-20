@@ -1,41 +1,73 @@
 h2 {
-  font-family: 'Press Start 2P'; /* Fuente tipo pixel */
-  color: #00796b; /* Color del texto */
-  text-align: center; /* Centrar el encabezado */
+  font-family: 'Press Start 2P';
+  /* Fuente tipo pixel */
+  color: #00796b;
+  /* Color del texto */
+  text-align: center;
+  /* Centrar el encabezado */
 }
 
 .details {
-  font-family: 'Press Start 2P'; /* Fuente tipo pixel */
-  color: #00796b; /* Color del texto */
-  margin-bottom: 20px; /* Espacio debajo de los detalles */
-  padding: 15px; /* Espaciado interno para la sección de detalles */
-  background-color: #ffffff; /* Color de fondo de los detalles */
-  border: 1px solid #ddd; /* Borde alrededor de los detalles */
-  border-radius: 5px; /* Bordes redondeados */
+  font-family: 'Press Start 2P';
+  /* Fuente tipo pixel */
+  color: #00796b;
+  /* Color del texto */
+  margin-bottom: 20px;
+  /* Espacio debajo de los detalles */
+  padding: 15px;
+  /* Espaciado interno para la sección de detalles */
+  background-color: #b2ebf2;
+  /* Color de fondo pastel */
+  border: 2px solid #4db6ac;
+  /* Borde suave */
+  border-radius: 0;
+  /* Bordes cuadrados */
 }
 
 .details p {
-  margin: 5px 0; /* Margen entre los párrafos */
-  color: #555; /* Color del texto de los detalles */
+  margin: 5px 0;
+  /* Margen entre los párrafos */
+}
+
+.message-container {
+  display: flex;
+  /* Usar flexbox para centrar el contenido */
+  align-items: center;
+  /* Centrar verticalmente */
+  justify-content: center;
+  /* Centrar horizontalmente */
+  height: auto;
+  /* Ajustar la altura automáticamente */
+  margin-top: 0;
+  /* Sin margen superior para estar justo debajo de .details */
 }
 
 .message-box {
-  margin-top: 15px; /* Espacio superior */
-  padding: 20px; /* Espaciado interno */
-  border: 2px solid #00796b; /* Borde del cuadro de mensaje */
-  border-radius: 5px; /* Bordes redondeados */
-  background-color: #ffeb3b; /* Color de fondo del cuadro de mensaje */
-  text-align: center; /* Centrar el texto en el cuadro de mensaje */
-  color: #ffeb3b; /* Color del texto del mensaje */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  display: flex; /* Usar flexbox para centrar el contenido */
-  align-items: center; /* Centrar verticalmente */
-  justify-content: center; /* Centrar horizontalmente */
-  transition: all 0.3s ease; /* Transición suave para cambios de tamaño */
-  font-family: 'Press Start 2P'; /* Fuente tipo pixel */
+  padding: 20px;
+  /* Espaciado interno */
+  border: 2px solid #00796b;
+  /* Borde del cuadro de mensaje */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  background-color: #ffeb3b;
+  /* Color de fondo del cuadro de mensaje */
+  text-align: center;
+  /* Centrar el texto en el cuadro de mensaje */
+  color: #ffeb3b;
+  /* Color del texto */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+  transition: all 0.3s ease;
+  /* Transición suave para cambios de tamaño */
+  font-family: 'Press Start 2P';
+  /* Fuente tipo pixel */
+  justify-content: center;
+  align-content: center;
 }
 
 .message-box p {
-  margin: 0; /* Sin margen en el párrafo del mensaje */
-  font-weight: bold; /* Texto en negrita */
+  margin: 0;
+  /* Sin margen en el párrafo del mensaje */
+  font-weight: bold;
+  /* Texto en negrita */
 }

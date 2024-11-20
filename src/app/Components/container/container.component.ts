@@ -78,5 +78,6 @@ export class ContainerComponent {
   
   toggleDarkMode(): void {
     this.isDarkMode = !this.isDarkMode; // Alternar el estado del modo oscuro
+    document.body.classList.toggle('dark-mode', this.isDarkMode);
   }
 }

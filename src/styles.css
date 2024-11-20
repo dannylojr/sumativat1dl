@@ -1,80 +1,117 @@
-/* Estilos generales para el modo oscuro */
-.dark-mode {
-    background-color: black; /* Fondo negro para toda la aplicación */
-    color: white; /* Texto blanco para toda la aplicación */
+/* Estilos para el modo oscuro */
+body.dark-mode {
+  background-color: #1a1a1a;
+  /* Fondo oscuro profundo */
+  color: #f7f7f7;
+  /* Color de letra claro */
+}
+
+body.dark-mode p {
+  color: #f7f7f7;
+  /* Color de letra claro */
 }
 
 /* Estilo para el contenedor principal */
-.dark-mode .container {
-    background-color: #1e1e1e; /* Fondo oscuro para la caja principal */
-
+body.dark-mode .container {
+  background-color: #222;
+  /* Fondo del contenedor oscuro */
+  color: #f7f7f7;
+  /* Color de texto claro */
+  padding: 20px;
+  /* Espaciado interno del contenedor */
 }
 
-/* Estilos para las columnas */
-.dark-mode .left-column,
-.dark-mode .right-column {
-    background-color: #1e1e1e; /* Fondo oscuro para columnas */
-    color: white; /* Texto blanco en columnas */
-    padding: 10px; /* Espaciado interno */
-    border-radius: 8px; /* Bordes redondeados */
+/* styles.css o el archivo CSS de tu componente */
+.container {
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Estilos para grupos de botones e inputs */
-.dark-mode .input-group,
-.dark-mode .button-group {
-    background-color: #333; /* Fondo oscuro para grupos */
-    border: 1px solid #444; /* Borde gris oscuro */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 10px; /* Espaciado interno */
+body.dark-mode h2 {
+  color: #ffffff;
+  /* Color de título claro */
 }
 
-/* Estilos para el botón de modo oscuro */
-.dark-mode .btn-night {
-    background-color: #555; /* Fondo del botón en modo oscuro */
-    color: white; /* Texto blanco en el botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 15px; /* Espaciado interno */
+/* Estilos para el modo nocturno */
+/* Estilos para el modo nocturno */
+body.dark-mode app-btn-primario,
+body.dark-mode app-btn-secundario,
+body.dark-mode app-btn-aceptar,
+body.dark-mode app-btn-cancelar{
+  background-color: #424242;
+  /* Color de fondo oscuro */
+  color: white;
+  /* Color del texto en modo oscuro */
+  border: 2px solid #616161;
+  /* Borde más oscuro */
 }
 
-/* Estilo para el visualizador en modo oscuro */
-.dark-mode app-visualizador {
-    background-color: #222; /* Fondo del visualizador */
-    color: white; /* Texto blanco en el visualizador */
-    padding: 10px; /* Espaciado interno */
-    border-radius: 8px; /* Bordes redondeados */
+
+
+/* Efecto hover para los botones en modo nocturno */
+body.dark-mode app-btn-primario:hover,
+body.dark-mode app-btn-secundario:hover,
+body.dark-mode app-btn-aceptar:hover,
+body.dark-mode app-btn-cancelar:hover{
+  background-color: #616161;
+  /* Color de fondo al pasar el mouse en modo oscuro */
 }
 
-/* Estilos para encabezados y otros textos */
-.dark-mode h2,
-.dark-mode h1 {
-    color: white; /* Texto blanco para encabezados */
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #333;
+  /* Fondo de entrada oscuro */
+  color: #f7f7f7;
+  /* Texto de entrada claro */
+  border: 1px solid #666;
+  /* Borde oscuro */
 }
 
-/* Estilos para inputs en modo oscuro */
-.dark-mode input {
-    background-color: #444; /* Fondo oscuro para inputs */
-    color: white; /* Texto blanco en inputs */
-    border: 1px solid #555; /* Borde gris oscuro para inputs */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px; /* Espaciado interno */
+body.dark-mode label {
+  color: #f7f7f7;
+  /* Color de texto claro */
 }
 
-/* Estilos para placeholders en inputs */
-.dark-mode input::placeholder {
-    color: #aaa; /* Color de placeholder más claro en modo oscuro */
+
+body.dark-mode .details {
+  color: #80cbc4;
+  /* Color claro para el texto de los detalles */
+  background-color: #333;
+  /* Fondo oscuro para los detalles */
+  border: 1px solid #555;
+  /* Borde oscuro alrededor de los detalles */
 }
 
-/* Estilos para botones en modo oscuro */
-.dark-mode button {
-    background-color: #555; /* Fondo de botones en modo oscuro */
-    color: white; /* Texto blanco en botones */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 15px; /* Espaciado interno */
+body.dark-mode .details p {
+  color: white;
+  /* Color claro para el texto de los párrafos en detalles */
 }
 
-/* Estilos para botones al pasar el mouse */
-.dark-mode button:hover {
-    background-color: #777; /* Fondo de botones al pasar el mouse en modo oscuro */
+body.dark-mode .message-box {
+  border: 2px solid white;
+  /* Borde claro para el cuadro de mensaje */
+  background-color: #444;
+  /* Fondo oscuro para el cuadro de mensaje */
+  color: #f7f7f7;
+  /* Color claro del texto del mensaje */
 }
+
+body.dark-mode .message-box p {
+  color: #f7f7f7;
+  /* Color claro para el texto en el cuadro de mensaje */
+}
+
+body.dark-mode .full-width-container,
+body.dark-mode btn-night {
+  background-color: #424242;
+  /* Color de fondo oscuro */
+  color: white;
+  /* Color del texto en modo oscuro */
+  border: 2px solid #616161;
+  /* Borde más oscuro */
+}
+
+body.dark-mode .full-width-container:hover,
+body.dark-mode btn-night:hover{
+  background-color: #616161;
+} 

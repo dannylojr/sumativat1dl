@@ -5,7 +5,6 @@ import { Component, Input} from '@angular/core';
   selector: 'app-visualizador',
   standalone: true,
   templateUrl: './visualizador.component.html',
-  imports: [NgStyle],
   styleUrls: ['./visualizador.component.css']
 })
 export class VisualizadorComponent {

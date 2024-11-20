@@ -5,6 +5,9 @@
     <p>Texto: {{ text }}</p>
 </div>
 <!-- Cuadro que muestra el mensaje, separado del resto -->
-<div class="message-box" [style.backgroundColor]="color" [style.width.px]="size" [style.height.px]="size">
-    <p>{{ visualizadorMensaje }}</p>
+<div class="message-container">
+    <div class="message-box" [style.backgroundColor]="color" [style.width.px]="size" 
+    [style.height.px]="size">
+        <p>{{ visualizadorMensaje }}</p>
+    </div>
 </div>

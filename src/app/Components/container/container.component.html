@@ -10,7 +10,7 @@
                 <app-btn-aceptar (click)="onAceptarClick()"></app-btn-aceptar>
                 <app-btn-cancelar (click)="onCancelarClick()"></app-btn-cancelar>
             </div>
-            <div>
+            <div class="full-width-container">
                 <app-btn-night (click)="toggleDarkMode()"></app-btn-night> <!-- Botón nocturno -->
             </div>
         </div>
@@ -29,6 +29,5 @@
             [text]="text"
             [visualizadorMensaje]="visualizadorMensaje">
         </app-visualizador>
-        {{isDarkMode}}
     </div>
 </div>
