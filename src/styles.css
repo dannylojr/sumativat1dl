@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilos generales para el modo oscuro */
+.dark-mode {
+    background-color: black; /* Fondo negro para toda la aplicación */
+    color: white; /* Texto blanco para toda la aplicación */
+}
+
+/* Estilo para el contenedor principal */
+.dark-mode .container {
+    background-color: #1e1e1e; /* Fondo oscuro para la caja principal */
+
+}
+
+/* Estilos para las columnas */
+.dark-mode .left-column,
+.dark-mode .right-column {
+    background-color: #1e1e1e; /* Fondo oscuro para columnas */
+    color: white; /* Texto blanco en columnas */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilos para grupos de botones e inputs */
+.dark-mode .input-group,
+.dark-mode .button-group {
+    background-color: #333; /* Fondo oscuro para grupos */
+    border: 1px solid #444; /* Borde gris oscuro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Estilos para el botón de modo oscuro */
+.dark-mode .btn-night {
+    background-color: #555; /* Fondo del botón en modo oscuro */
+    color: white; /* Texto blanco en el botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+}
+
+/* Estilo para el visualizador en modo oscuro */
+.dark-mode app-visualizador {
+    background-color: #222; /* Fondo del visualizador */
+    color: white; /* Texto blanco en el visualizador */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilos para encabezados y otros textos */
+.dark-mode h2,
+.dark-mode h1 {
+    color: white; /* Texto blanco para encabezados */
+}
+
+/* Estilos para inputs en modo oscuro */
+.dark-mode input {
+    background-color: #444; /* Fondo oscuro para inputs */
+    color: white; /* Texto blanco en inputs */
+    border: 1px solid #555; /* Borde gris oscuro para inputs */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Estilos para placeholders en inputs */
+.dark-mode input::placeholder {
+    color: #aaa; /* Color de placeholder más claro en modo oscuro */
+}
+
+/* Estilos para botones en modo oscuro */
+.dark-mode button {
+    background-color: #555; /* Fondo de botones en modo oscuro */
+    color: white; /* Texto blanco en botones */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+}
+
+/* Estilos para botones al pasar el mouse */
+.dark-mode button:hover {
+    background-color: #777; /* Fondo de botones al pasar el mouse en modo oscuro */
+}

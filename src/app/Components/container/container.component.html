@@ -1,40 +1,34 @@
-<!-- src/app/Components/container/container.component.html -->
-<div class="main-container">
-  <div class="left-panel">
-    <div class="output-info">
-      <h3>Salida</h3>
-      <p>Email: {{ email }}</p>
-      <p>Password: {{ password }}</p>
-      <p>Text: {{ text }}</p>
+<div class="container" [ngClass]="{'dark-mode': isDarkMode}">
+    <div class="left-column">
+        <h2>CONTROLES</h2>
+        <div class="button-group">
+            <div class="button-row">
+                <app-btn-primario (click)="changeColor() ; clearMessage()"></app-btn-primario>
+                <app-btn-secundario (sizeChange)="incrementSize()"></app-btn-secundario>
+            </div>
+            <div class="button-row">
+                <app-btn-aceptar (click)="onAceptarClick()"></app-btn-aceptar>
+                <app-btn-cancelar (click)="onCancelarClick()"></app-btn-cancelar>
+            </div>
+            <div>
+                <app-btn-night (click)="toggleDarkMode()"></app-btn-night> <!-- Botón nocturno -->
+            </div>
+        </div>
+        <div class="input-group">
+            <app-email (emailChange)="onEmailChange($event)"></app-email>
+            <app-password (passwordChange)="onPasswordChange($event)"></app-password>
+            <app-text (textChange)="onTextChange($event)"></app-text>
+        </div>
     </div>
-    <div class="visualizador-container">
-      <app-visualizador
-        [color]="currentColor" 
-        [size]="size">
-      </app-visualizador>
-      <div>{{ visualizadorMensaje }}</div> <!-- Mostrar el mensaje -->
+    <div class="right-column">
+        <app-visualizador 
+            [color]="visualizadorColor" 
+            [size]="size" 
+            [email]="email" 
+            [password]="password" 
+            [text]="text"
+            [visualizadorMensaje]="visualizadorMensaje">
+        </app-visualizador>
+        {{isDarkMode}}
     </div>
-  </div>
-
-  <div class="right-panel">
-    <div class="button-group">
-      <app-btn-primario (click)="onChangeColorClick()">Cambiar Color</app-btn-primario>
-      <app-btn-secundario (click)="incrementSize()">Cambiar Tamaño</app-btn-secundario>
-    </div>
-
-    <div class="input-group">
-      <app-email (emailChange)="onEmailChange($event)"></app-email>
-      <app-password (passwordChange)="onPasswordChange($event)"></app-password>
-      <app-text (textChange)="onTextChange($event)"></app-text>
-    </div>
-
-    <div class="button-group">
-      <app-btn-aceptar (click)="onAceptarClick()"></app-btn-aceptar>
-      <app-btn-cancelar (click)="onCancelarClick()"></app-btn-cancelar>  
-    </div>
-
-    <div *ngIf="errorMessage" class="error-message">
-      {{ errorMessage }}
-    </div>
-  </div>
 </div>

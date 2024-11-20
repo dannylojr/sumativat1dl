@@ -1,9 +1,20 @@
+/* Estilo común para todos los botones */
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #007bff; /* Color de fondo */
-    color: white; /* Color del texto */
-    border: none;
-    border-radius: 5px;
-  }
+  background-color: #b2ebf2; /* Color de fondo pastel */
+  border: 2px solid #4db6ac; /* Borde suave */
+  border-radius: 0; /* Bordes cuadrados */
+  padding: 10px; /* Espaciado interno */
+  font-family: 'Press Start 2P', cursive; /* Fuente tipo pixel */
+  transition: background-color 0.3s, transform 0.2s; /* Animación suave */
+  cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+}
+
+button:hover {
+  background-color: #80deea; /* Color de fondo al pasar el mouse */
+  transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Asegurarse de que no haya margen extra en el último botón */
+button:last-child {
+  margin-right: 0; /* Sin margen derecho */
+}

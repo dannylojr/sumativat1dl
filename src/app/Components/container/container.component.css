@@ -1,39 +1,44 @@
-/* src/app/Components/container/container.component.css */
-.main-container {
-    display: flex;
-    justify-content: space-between; /* Espacio entre los paneles */
-    padding: 20px;
-  }
-  
-  .left-panel, .right-panel {
-    flex: 1; /* Cada panel ocupa la mitad del contenedor */
-    margin: 10px; /* Espacio entre los paneles */
-  }
-  
-  .output-info {
-    margin-bottom: 20px; /* Espacio debajo de la salida */
-  }
-  
-  .visualizador-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrar el cuadrado */
-  }
-  
-  .input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Espacio entre los campos de entrada */
-    margin-bottom: 20px; /* Espacio debajo de los campos de entrada */
-  }
-  
-  .button-group {
-    display: flex;
-    gap: 10px; /* Espacio entre los botones */
-    margin-bottom: 20px; /* Espacio debajo de los botones */
-  }
-  
-  .error-message {
-    color: red; /* Estilo para el mensaje de error */
-    margin-top: 10px; /* Espacio encima del mensaje de error */
-  }
+/* Estilo general para el contenedor */
+.container {
+  display: flex; /* Usar flexbox para organizar columnas */
+  padding: 20px; /* Espaciado interno */
+  background-color: #e0f7fa; /* Color de fondo suave */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilo para la columna izquierda */
+.left-column {
+  flex: 1; /* Ocupa el 50% del espacio disponible */
+  margin-right: 20px; /* Espacio entre columnas */
+}
+
+/* Estilo para la columna derecha */
+.right-column {
+  flex: 1; /* Ocupa el 50% del espacio disponible */
+  background-color: #ffffff; /* Fondo blanco para el visualizador */
+  padding: 15px; /* Espaciado interno */
+  border: 2px solid #4db6ac; /* Borde suave */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para el grupo de botones */
+.button-group {
+  margin-bottom: 20px; /* Espacio debajo del grupo de botones */
+}
+
+/* Estilo para cada fila de botones */
+.button-row {
+  display: flex; /* Usar flexbox para organizar botones en fila */
+  margin-bottom: 10px; /* Espacio entre filas */
+}
+
+h2 {
+  font-family: 'Press Start 2P'; /* Fuente tipo pixel */
+  color: #00796b; /* Color del texto */
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+

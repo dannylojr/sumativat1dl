@@ -1,7 +1,41 @@
-.visualizador-content {
-    border: 1px solid black; /* Borde para visualizar el cuadrado */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: width 0.3s, height 0.3s; /* Suavizar el cambio de tamaño */
-  }
+h2 {
+  font-family: 'Press Start 2P'; /* Fuente tipo pixel */
+  color: #00796b; /* Color del texto */
+  text-align: center; /* Centrar el encabezado */
+}
+
+.details {
+  font-family: 'Press Start 2P'; /* Fuente tipo pixel */
+  color: #00796b; /* Color del texto */
+  margin-bottom: 20px; /* Espacio debajo de los detalles */
+  padding: 15px; /* Espaciado interno para la sección de detalles */
+  background-color: #ffffff; /* Color de fondo de los detalles */
+  border: 1px solid #ddd; /* Borde alrededor de los detalles */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.details p {
+  margin: 5px 0; /* Margen entre los párrafos */
+  color: #555; /* Color del texto de los detalles */
+}
+
+.message-box {
+  margin-top: 15px; /* Espacio superior */
+  padding: 20px; /* Espaciado interno */
+  border: 2px solid #00796b; /* Borde del cuadro de mensaje */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #ffeb3b; /* Color de fondo del cuadro de mensaje */
+  text-align: center; /* Centrar el texto en el cuadro de mensaje */
+  color: #ffeb3b; /* Color del texto del mensaje */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  display: flex; /* Usar flexbox para centrar el contenido */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  transition: all 0.3s ease; /* Transición suave para cambios de tamaño */
+  font-family: 'Press Start 2P'; /* Fuente tipo pixel */
+}
+
+.message-box p {
+  margin: 0; /* Sin margen en el párrafo del mensaje */
+  font-weight: bold; /* Texto en negrita */
+}

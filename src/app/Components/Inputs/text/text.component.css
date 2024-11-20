@@ -1,0 +1,23 @@
+/* Estilo para los inputs */
+input {
+    border: 2px solid #4db6ac; /* Borde suave */
+    border-radius: 0; /* Bordes cuadrados */
+    padding: 10px; /* Espaciado interno */
+    font-family: 'Press Start 2P', cursive; /* Fuente tipo pixel */
+    background-color: #b2ebf2; /* Color de fondo pastel */
+    margin-bottom: 15px; /* Espacio entre inputs */
+    width: 100%; /* Asegurar que el input ocupe el ancho completo */
+    box-sizing: border-box; /* Incluir padding y borde en el ancho total */
+}
+
+/* Eliminar el contorno por defecto */
+input:focus {
+    outline: none; /* Eliminar el contorno por defecto */
+    border-color: #00796b; /* Cambiar color del borde al enfocar */
+}
+
+label{
+    font-family: 'Press Start 2P'; /* Fuente tipo pixel */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #00796b; /* Color del texto */
+}

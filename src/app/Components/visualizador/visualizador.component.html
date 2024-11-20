@@ -1,3 +1,10 @@
-<div [style.backgroundColor]="color" [style.width.px]="size" [style.height.px]="size" style="border: 1px solid black; padding: 10px;">
-
+<h2>Visualizador</h2>
+<div class="details">
+    <p>Email: {{ email }}</p>
+    <p>Password: {{ password }}</p>
+    <p>Texto: {{ text }}</p>
+</div>
+<!-- Cuadro que muestra el mensaje, separado del resto -->
+<div class="message-box" [style.backgroundColor]="color" [style.width.px]="size" [style.height.px]="size">
+    <p>{{ visualizadorMensaje }}</p>
 </div>
