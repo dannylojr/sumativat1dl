@@ -32,6 +32,7 @@ export class ContainerComponent {
   visualizadorColor: string = 'white';
   visualizadorMensaje: string = '';
 
+  validateEmail: string = '';
   // Propiedad para controlar el modo oscuro
   isDarkMode: boolean = false;
 
@@ -60,12 +61,14 @@ export class ContainerComponent {
   }
 
   // Métodos para recibir datos de los componentes hijos
-  onEmailChange(email: string): void {
+  onEmailChange({ email, errorMessage }: { email: string; errorMessage: string }): void {
     this.email = email;
+    this.errorMessage = errorMessage; // Actualiza el mensaje de error del email
   }
 
-  onPasswordChange(password: string): void {
+  onPasswordChange({ password, errorMessage }: { password: string; errorMessage: string }): void {
     this.password = password;
+    this.errorMessage = errorMessage; // Actualiza el mensaje de error de la contraseña
   }
 
   onTextChange(text: string): void {

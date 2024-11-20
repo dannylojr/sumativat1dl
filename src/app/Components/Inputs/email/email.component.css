@@ -5,7 +5,6 @@ input {
     padding: 10px; /* Espaciado interno */
     font-family: 'Press Start 2P', cursive; /* Fuente tipo pixel */
     background-color: #b2ebf2; /* Color de fondo pastel */
-    margin-bottom: 15px; /* Espacio entre inputs */
     width: 100%; /* Asegurar que el input ocupe el ancho completo */
     box-sizing: border-box; /* Incluir padding y borde en el ancho total */
 }
@@ -21,3 +20,14 @@ label{
     font-size: 16px; /* Tamaño de fuente */
     color: #00796b; /* Color del texto */
 }
+
+/* src/app/Components/Inputs/email/email.component.css */
+.error {
+    color: red; /* Color rojo oscuro para mensajes de error */
+    margin-top:5px;
+    display: inline-block; /* Para que el fondo se ajuste al texto */
+  }
+  *{
+    font-family: 'Press Start 2P'; /* Fuente tipo pixel */
+    font-size: 10px; /* Tamaño de fuente */
+  }

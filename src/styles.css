@@ -36,7 +36,8 @@ body.dark-mode h2 {
 body.dark-mode app-btn-primario,
 body.dark-mode app-btn-secundario,
 body.dark-mode app-btn-aceptar,
-body.dark-mode app-btn-cancelar{
+body.dark-mode app-btn-cancelar,
+body.dark-mode app-btn-night {
   background-color: #424242;
   /* Color de fondo oscuro */
   color: white;
@@ -51,7 +52,8 @@ body.dark-mode app-btn-cancelar{
 body.dark-mode app-btn-primario:hover,
 body.dark-mode app-btn-secundario:hover,
 body.dark-mode app-btn-aceptar:hover,
-body.dark-mode app-btn-cancelar:hover{
+body.dark-mode app-btn-cancelar:hover,
+body.dark-mode app-btn-night:hover {
   background-color: #616161;
   /* Color de fondo al pasar el mouse en modo oscuro */
 }
@@ -100,18 +102,3 @@ body.dark-mode .message-box p {
   color: #f7f7f7;
   /* Color claro para el texto en el cuadro de mensaje */
 }
-
-body.dark-mode .full-width-container,
-body.dark-mode btn-night {
-  background-color: #424242;
-  /* Color de fondo oscuro */
-  color: white;
-  /* Color del texto en modo oscuro */
-  border: 2px solid #616161;
-  /* Borde más oscuro */
-}
-
-body.dark-mode .full-width-container:hover,
-body.dark-mode btn-night:hover{
-  background-color: #616161;
-} 

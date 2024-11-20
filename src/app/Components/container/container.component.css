@@ -94,6 +94,8 @@ app-btn-aceptar:hover,
 app-btn-cancelar:hover {
   background-color: #00796b; /* Color de fondo al pasar el mouse */
   transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el mouse */
+  color: #b2ebf2; /* Color del texto del botón */
+
 }
 
 /* Contenedor para el botón de modo oscuro */
@@ -103,7 +105,7 @@ app-btn-cancelar:hover {
 }
 
 /* Estilo para el botón de modo oscuro */
-.full-width-container app-btn-night {
+app-btn-night {
   flex: 1; /* Hace que el botón ocupe todo el espacio disponible */
   margin: 0; /* Elimina márgenes si es necesario */
   padding: 10px; /* Espaciado interno */
@@ -118,7 +120,8 @@ app-btn-cancelar:hover {
 }
 
 /* Efecto hover para el botón de modo oscuro */
-.full-width-container app-btn-night:hover {
+app-btn-night:hover {
   background-color: #00796b; /* Color de fondo al pasar el mouse */
   transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el mouse */
+  color: #b2ebf2; /* Color del texto del botón */
 }
