@@ -13,16 +13,20 @@ import { BtnNightComponent } from '../Botones/btn-night/btn-night.component';
 @Component({
   selector: 'app-container',
   standalone: true,
-  imports: [BtnPrimarioComponent, BtnSecundarioComponent, BtnAceptarComponent, VisualizadorComponent, 
-    EmailComponent, PasswordComponent, TextComponent, BtnCancelarComponent, NgIf, BtnNightComponent, 
+  imports: [BtnPrimarioComponent, BtnSecundarioComponent, BtnAceptarComponent, VisualizadorComponent,
+    EmailComponent, PasswordComponent, TextComponent, BtnCancelarComponent, NgIf, BtnNightComponent,
     NgClass],
   templateUrl: './container.component.html',
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent {
-  colors: string[] = ['red', 'blue', 'green', 'yellow', 'purple'];
+  colors: string[] = ['red', 'blue', 'green', 'yellow', 'purple', 'orange', 'pink', 'cyan'];
   currentColor: string = 'white';
   size: number = 150;
+  incrementAmount: number = 50; // Cantidad a incrementar
+  animationDuration: number = 300; // Duración de la animación en milisegundos
+  maxSize: number = 300; // Tamaño máximo permitido
+  originalSize: number = this.size; // Guardar el tamaño original
 
   email: string = '';
   password: string = '';
@@ -43,10 +47,17 @@ export class ContainerComponent {
 
   // Método para incrementar el tamaño
   incrementSize(): void {
-    this.size += 50;
-    setTimeout(() => {
-      this.size -= 50;
-    }, 300);
+    // Verificar si el tamaño actual es menor que el tamaño máximo
+    if (this.size < this.maxSize) {
+      this.size += this.incrementAmount; // Incrementar el tamaño
+    }
+
+    // Si se ha alcanzado el tamaño máximo, restablecer al tamaño original
+    if (this.size >= this.maxSize) {
+      setTimeout(() => {
+        this.size = this.originalSize; // Volver al tamaño original
+      }, this.animationDuration);
+    }
   }
 
   // Método para mostrar los datos en el visualizador
@@ -78,7 +89,7 @@ export class ContainerComponent {
   clearMessage(): void {
     this.visualizadorMensaje = ''; // Limpiar el mensaje
   }
-  
+
   toggleDarkMode(): void {
     this.isDarkMode = !this.isDarkMode; // Alternar el estado del modo oscuro
     document.body.classList.toggle('dark-mode', this.isDarkMode);

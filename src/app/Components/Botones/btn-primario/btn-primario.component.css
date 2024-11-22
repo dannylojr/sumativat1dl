@@ -1,0 +1,91 @@
+:host{
+    flex: 1;
+  /* Ocupa todo el espacio disponible en la fila */
+  margin: 0 5px;
+  /* Espacio entre botones */
+  padding: 10px 20px;
+  /* Espaciado interno del botón (ajustado) */
+  font-size: 16px;
+  /* Tamaño de la fuente */
+  border: 3px solid #28aabb;
+  /* Borde más oscuro y grueso */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  background-color: #a8d5e2;
+  /* Verde oscuro para los botones */
+  color: #333;
+  /* Color del texto blanco para mejor contraste */
+  font-family: 'Press Start 2P', cursive;
+  /* Fuente tipo pixel */
+  text-transform: uppercase;
+  /* Texto en mayúsculas */
+  cursor: pointer;
+  /* Cambiar el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease, transform 0.1s;
+  /* Transiciones suaves */
+  min-width: 120px;
+  /* Ancho mínimo para los botones */
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.5),
+    /* Sombra interna para el efecto de relieve */
+    0 2px 5px rgba(0, 0, 0, 0.5);
+  /* Sombra externa para el efecto de relieve */
+}
+
+:host:hover{
+    background-color: #7ec8d2;
+  /* Color de fondo más oscuro al pasar el mouse */
+  transform: scale(1.05);
+  /* Aumentar ligeramente el tamaño al pasar el mouse */
+  color: #fff;
+  /* Cambiar color del texto al blanco para mejor contraste */
+}
+
+:host:active{
+    transform: translateY(2px);
+  /* Empujar el botón hacia abajo al hacer clic */
+  box-shadow: 0 2px 0 #333;
+  /* Reducir sombra al hacer clic */
+}
+
+
+.dark-mode :host {
+  background-color: #5a7b5a;
+  /* Verde oscuro para los botones */
+  color: #d3d3d3;
+  /* Color del texto blanco para mejor contraste */
+  border: 3px solid #4e8234;
+  /* Borde más oscuro y grueso */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  padding: 10px 20px;
+  /* Espaciado interno del botón */
+  font-family: 'Press Start 2P', cursive;
+  /* Fuente retro (asegúrate de incluirla) */
+  text-transform: uppercase;
+  /* Texto en mayúsculas */
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.5),
+    /* Sombra interna para el efecto de relieve */
+    0 2px 5px rgba(0, 0, 0, 0.5);
+  /* Sombra externa para el efecto de relieve */
+  cursor: pointer;
+  /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s, transform 0.1s;
+  /* Transiciones suaves */
+}
+
+.dark-mode :host:hover{
+  background-color: #7a9b7a;
+  /* Color de fondo al pasar el mouse */
+  transform: translateY(-2px);
+  /* Efecto de elevación al pasar el mouse */
+  transform: scale(1.05);
+  color: #154b2b;
+}
+
+.dark-mode :host:active {
+  background-color: #4e8234;
+  /* Color de fondo más oscuro al hacer clic */
+  transform: translateY(0);
+  /* Regresa a la posición original */
+  box-shadow: 0 2px 0 #333;
+}

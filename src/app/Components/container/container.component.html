@@ -1,30 +1,32 @@
-<div class="container" [ngClass]="{'dark-mode': isDarkMode}">
-    <div class="left-column">
-        <h2>CONTROLES</h2>
-        <div class="button-group">
-            <div class="button-row">
-                <app-btn-primario (click)="changeColor() ; clearMessage()"></app-btn-primario>
-                <app-btn-secundario (sizeChange)="incrementSize()"></app-btn-secundario>
+<div [ngClass]="{'dark-mode': isDarkMode}">
+    <div class="envase">
+        <div class="left-column">
+            <h2>CONTROLES</h2>
+            <div class="button-group">
+                <div class="button-row">
+                    <app-btn-primario (click)="changeColor() ; clearMessage()"></app-btn-primario>
+                    <app-btn-secundario (click)="incrementSize()"></app-btn-secundario>
+                </div>
+                <div class="button-row">
+                    <app-btn-aceptar (click)="onAceptarClick()"></app-btn-aceptar>
+                    <app-btn-cancelar (click)="onCancelarClick()"></app-btn-cancelar>
+                </div>
+                <div class="full-width-container">
+                    <app-btn-night (click)="toggleDarkMode()"></app-btn-night> <!-- Botón nocturno -->
+                </div>
             </div>
-            <div class="button-row">
-                <app-btn-aceptar (click)="onAceptarClick()"></app-btn-aceptar>
-                <app-btn-cancelar (click)="onCancelarClick()"></app-btn-cancelar>
-            </div>
-            <div class="full-width-container">
-                <app-btn-night (click)="toggleDarkMode()"></app-btn-night> <!-- Botón nocturno -->
+            <div class="input-group">
+                <div>
+                    <app-email (emailChange)="onEmailChange($event)"></app-email>
+                </div>
+                <app-password (passwordChange)="onPasswordChange($event)"></app-password>
+                <app-text (textChange)="onTextChange($event)"></app-text>
             </div>
         </div>
-        <div class="input-group">
-            <div>
-                <app-email (emailChange)="onEmailChange($event)"></app-email>
-            </div>
-            <app-password (passwordChange)="onPasswordChange($event)"></app-password>
-            <app-text (textChange)="onTextChange($event)"></app-text>
+        <div class="right-column">
+            <app-visualizador [color]="visualizadorColor" [size]="size" [email]="email" [password]="password"
+                [text]="text" [visualizadorMensaje]="visualizadorMensaje">
+            </app-visualizador>
         </div>
-    </div>
-    <div class="right-column">
-        <app-visualizador [color]="visualizadorColor" [size]="size" [email]="email" [password]="password" [text]="text"
-            [visualizadorMensaje]="visualizadorMensaje">
-        </app-visualizador>
     </div>
 </div>

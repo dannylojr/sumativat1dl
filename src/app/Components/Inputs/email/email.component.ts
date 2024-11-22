@@ -1,4 +1,4 @@
-import { NgIf } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({

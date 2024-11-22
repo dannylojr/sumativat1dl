@@ -1,6 +1,6 @@
 <!-- src/app/Components/Inputs/email/email.component.html -->
 <div>
     <label for="email">Email:</label>
-    <input type="email" id="email" (input)="onEmailInput($event)" />
+    <input type="email" class="email" (input)="onEmailInput($event)"/>
     <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
-  </div>
+</div>

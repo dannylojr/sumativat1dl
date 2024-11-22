@@ -25,7 +25,9 @@ export class PasswordComponent {
     const hasNumber = /\d/.test(this.password);
     const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(this.password);
     this.errorClass = 'error';
-    if (!lengthValid) {
+    if (this.password.length === 0) {
+      this.errorMessage = 'El campo de contraseña no puede estar vacío.';
+    } else if (!lengthValid) {
       this.errorMessage = 'La contraseña debe tener al menos 8 caracteres.';
       this.errorClass = 'error-weak'; // Clase para contraseña débil
     } else if (!hasLetter || !hasNumber) {

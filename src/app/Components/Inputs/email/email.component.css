@@ -1,33 +1,106 @@
 /* Estilo para los inputs */
 input {
-    border: 2px solid #4db6ac; /* Borde suave */
-    border-radius: 0; /* Bordes cuadrados */
-    padding: 10px; /* Espaciado interno */
-    font-family: 'Press Start 2P', cursive; /* Fuente tipo pixel */
-    background-color: #b2ebf2; /* Color de fondo pastel */
-    width: 100%; /* Asegurar que el input ocupe el ancho completo */
-    box-sizing: border-box; /* Incluir padding y borde en el ancho total */
+    border: 4px solid #28aabb;
+    /* Borde más oscuro para un look retro */
+    border-radius: 5px;
+    /* Bordes ligeramente redondeados */
+    padding: 10px;
+    /* Espaciado interno */
+    font-family: 'Press Start 2P', cursive;
+    /* Fuente tipo pixel */
+    background-color: #a8d5e2;
+    /* Color de fondo más suave */
+    color: #333;
+    /* Color del texto del input */
+    width: 100%;
+    /* Asegurar que el input ocupe el ancho completo */
+    box-sizing: border-box;
+    /* Incluir padding y borde en el ancho total */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Transiciones suaves para borde y sombra */
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.5),
+        /* Sombra interna para el efecto de relieve */
+        0 2px 5px rgba(0, 0, 0, 0.5);
+    /* Sombra externa para el efecto de relieve */
 }
 
 /* Eliminar el contorno por defecto */
 input:focus {
-    outline: none; /* Eliminar el contorno por defecto */
-    border-color: #00796b; /* Cambiar color del borde al enfocar */
+    outline: none;
+    /* Eliminar el contorno por defecto */
+    border-color: #10dfc6;
+    /* Cambiar color del borde al enfocar */
+    box-shadow: 0 0 10px #10dfc6;
+    /* Agregar sombra al enfocar para mayor énfasis */
 }
 
-label{
-    font-family: 'Press Start 2P'; /* Fuente tipo pixel */
-    font-size: 16px; /* Tamaño de fuente */
-    color: #00796b; /* Color del texto */
+/* Estilo para las etiquetas */
+label {
+    font-family: 'Press Start 2P', cursive;
+    /* Fuente tipo pixel */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    color: #333;
+    /* Color del texto */
+    margin-bottom: 5px;
+    /* Espacio entre la etiqueta y el input */
+    display: block;
+    /* Hacer que la etiqueta ocupe todo el ancho */
 }
 
-/* src/app/Components/Inputs/email/email.component.css */
+/* Estilo para mensajes de error */
 .error {
-    color: red; /* Color rojo oscuro para mensajes de error */
-    margin-top:5px;
-    display: inline-block; /* Para que el fondo se ajuste al texto */
-  }
-  *{
-    font-family: 'Press Start 2P'; /* Fuente tipo pixel */
-    font-size: 10px; /* Tamaño de fuente */
-  }
+    color: #ff4444;
+    /* Color rojo más vibrante para mensajes de error */
+    margin-top: 5px;
+    /* Espacio superior para separar del input */
+    display: inline-block;
+    /* Para que el fondo se ajuste al texto */
+    font-family: 'Press Start 2P', cursive;
+    /* Fuente tipo pixel */
+    font-size: 12px;
+    /* Tamaño de fuente ajustado para el mensaje de error */
+}
+
+/* Estilo global para elementos */
+* {
+    font-family: 'Press Start 2P', cursive;
+    /* Fuente tipo pixel */
+    font-size: 10px;
+    /* Tamaño de fuente global */
+}
+
+:host-context(.dark-mode) input {
+    background-color: #5a7b5a;
+    /* Fondo de entrada oscuro */
+    color: #ffffff;
+    /* Texto de entrada blanco para mejor contraste */
+    border: 4px solid #4e8234;
+    /* Borde más oscuro */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    padding: 10px;
+    /* Espaciado interno */
+    font-family: 'Press Start 2P', cursive;
+    /* Fuente retro */
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.5);
+    /* Sombra interna para el efecto de relieve */
+}
+
+:host-context(.dark-mode) input:focus {
+    outline: none;
+    /* Eliminar el contorno por defecto */
+    border-color: #84c41d;
+    /* Cambiar color del borde al enfocar */
+    box-shadow: 0 0 10px #84c41d;
+    ;
+    /* Agregar sombra al enfocar para mayor énfasis */
+}
+
+/* Estilos para etiquetas en modo Game Boy */
+:host-context(.dark-mode) label {
+    color: #d3d3d3;
+    /* Color de texto claro */
+    font-family: 'Press Start 2P', cursive;
+    /* Fuente retro */
+}

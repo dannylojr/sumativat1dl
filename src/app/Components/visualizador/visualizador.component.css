@@ -45,7 +45,7 @@ h2 {
 .message-box {
   padding: 20px;
   /* Espaciado interno */
-  border: 2px solid #00796b;
+  border: 4px solid #00796b;
   /* Borde del cuadro de mensaje */
   border-radius: 5px;
   /* Bordes redondeados */
@@ -70,4 +70,51 @@ h2 {
   /* Sin margen en el párrafo del mensaje */
   font-weight: bold;
   /* Texto en negrita */
+}
+
+/* MODO OSCURO /*
+/* Estilos para detalles en modo Game Boy */
+:host-context(.dark-mode) .details {
+  color: #80cbc4;
+  margin-bottom: 20px;
+  /* Espacio debajo de los detalles */
+  padding: 15px;
+  /* Espaciado interno para la sección de detalles */
+  background-color: #1e3c1e;
+  /* Color de fondo pastel */
+  border: 2px solid #4e8234;
+  /* Bordes cuadrados */
+}
+
+/* Estilos para el texto dentro de detalles */
+:host-context(.dark-mode) .details p {
+  color: #d3d3d3;
+  /* Color claro para el texto de los párrafos en detalles */
+}
+
+/* Estilos para el cuadro de mensaje en modo Game Boy */
+:host-context(.dark-mode) .message-box {
+  border: 4px solid #4e8234;
+  /* Borde claro para el cuadro de mensaje */
+  background-color: #3a3a3a;
+  /* Fondo oscuro para el cuadro de mensaje */
+  color: #d3d3d3;
+  /* Color claro del texto del mensaje */
+  padding: 20px;
+  /* Espaciado interno */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  /* Sombra para el cuadro de mensaje */
+}
+
+/* Estilo para el texto dentro del cuadro de mensaje */
+:host-context(.dark-mode) .message-box p {
+  color: #d3d3d3;
+  /* Color claro para el texto en el cuadro de mensaje */
+}
+
+:host-context(.dark-mode) h2 {
+  color: #5fc736;
+  /* Color de título claro */
 }

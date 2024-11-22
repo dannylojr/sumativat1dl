@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ContainerComponent } from './Components/container/container.component';
+import { NgClass } from '@angular/common';
+import { BtnNightComponent } from './Components/Botones/btn-night/btn-night.component';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +12,5 @@ import { ContainerComponent } from './Components/container/container.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'myapp';
+  title = 'Galería de Componentes';
 }
