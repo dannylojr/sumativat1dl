@@ -71,18 +71,18 @@ h2 {
 
 /* Estilo para el contenedor principal */
 .dark-mode .envase {
-  background-color: #1d421d;
+  background-color: #1b2d35;
 }
 
 .dark-mode .right-column,
 .dark-mode .left-column {
-  border: 2px solid #146e18;
+  border: 2px solid #121b21;
   /* Borde más claro para un contraste suave */
-  background-color: #1a3e1a;
+  background-color: #26414c;
   /* Color de fondo más oscuro y suave */
 }
 
 .dark-mode h2 {
-  color: #5fc736;
+  color: #325a65;
   /* Color de título claro */
 }
