@@ -1,5 +1,5 @@
-:host{
-    flex: 1;
+:host {
+  flex: 1;
   /* Ocupa todo el espacio disponible en la fila */
   margin: 0 5px;
   /* Espacio entre botones */
@@ -7,14 +7,14 @@
   /* Espaciado interno del botón (ajustado) */
   font-size: 16px;
   /* Tamaño de la fuente */
-  border: 3px solid #28aabb;
+  border: 3px solid #733c2b;
   /* Borde más oscuro y grueso */
   border-radius: 5px;
   /* Bordes redondeados */
-  background-color: #a8d5e2;
-  /* Verde oscuro para los botones */
+  background-color: #9f593a;
+  /* Color de fondo para los botones */
   color: #333;
-  /* Color del texto blanco para mejor contraste */
+  /* Color del texto para mejor contraste */
   font-family: 'Press Start 2P', cursive;
   /* Fuente tipo pixel */
   text-transform: uppercase;
@@ -22,38 +22,41 @@
   cursor: pointer;
   /* Cambiar el cursor al pasar sobre el botón */
   transition: background-color 0.3s ease, transform 0.1s;
-  /* Transiciones suaves */
+  /* Transiciones suaves para el fondo y la transformación */
   min-width: 120px;
   /* Ancho mínimo para los botones */
-  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.5),
+  box-shadow: inset 0 -2px 0 rgba(236, 203, 203, 0.5),
     /* Sombra interna para el efecto de relieve */
-    0 2px 5px rgba(0, 0, 0, 0.5);
+    0 2px 5px rgba(236, 203, 203, 0.5);
   /* Sombra externa para el efecto de relieve */
 }
 
-:host:hover{
-    background-color: #7ec8d2;
-  /* Color de fondo más oscuro al pasar el mouse */
+:host:hover {
+  background-color: #da8450;
+  /* Color de fondo más claro al pasar el mouse */
   transform: scale(1.05);
   /* Aumentar ligeramente el tamaño al pasar el mouse */
   color: #fff;
   /* Cambiar color del texto al blanco para mejor contraste */
 }
 
-:host:active{
-    transform: translateY(2px);
+:host:active {
+  background-color: #733c2b;
+  /* Color de fondo más oscuro al hacer clic */
+  transform: translateY(2px);
   /* Empujar el botón hacia abajo al hacer clic */
   box-shadow: 0 2px 0 #333;
   /* Reducir sombra al hacer clic */
 }
 
+/* Estilos para el modo oscuro */
 .dark-mode :host {
-  background-color: #47758b;
-  /* Verde oscuro para los botones */
+  background-color: #6b3a26;
+  /* Color de fondo para los botones en modo oscuro */
   color: #d3d3d3;
-  /* Color del texto blanco para mejor contraste */
-  border: 3px solid #154764;
-  /* Borde más oscuro y grueso */
+  /* Color del texto en modo oscuro */
+  border: 3px solid #4a241a;
+  /* Borde más oscuro y grueso en modo oscuro */
   border-radius: 5px;
   /* Bordes redondeados */
   padding: 10px 20px;
@@ -63,28 +66,31 @@
   text-transform: uppercase;
   /* Texto en mayúsculas */
   box-shadow: inset 0 -2px 0 rgba(209, 205, 205, 0.5),
-    /* Sombra interna para el efecto de relieve */
+    /* Sombra interna para el efecto de relieve en modo oscuro */
     0 2px 5px rgba(209, 205, 205, 0.5);
-  /* Sombra externa para el efecto de relieve */
+  /* Sombra externa para el efecto de relieve en modo oscuro */
   cursor: pointer;
   /* Cambia el cursor al pasar sobre el botón */
   transition: background-color 0.3s, transform 0.1s;
   /* Transiciones suaves */
 }
 
-.dark-mode :host:hover{
-  background-color: #88aec2;
-  /* Color de fondo al pasar el mouse */
+.dark-mode :host:hover {
+  background-color: #98542f;
+  /* Color de fondo al pasar el mouse en modo oscuro */
   transform: translateY(-2px);
   /* Efecto de elevación al pasar el mouse */
   transform: scale(1.05);
-  color: #1d6a95;
+  /* Aumentar ligeramente el tamaño al pasar el mouse en modo oscuro */
+  color: #FFB380;
+  /* Cambiar el color del texto al pasar el mouse en modo oscuro */
 }
 
 .dark-mode :host:active {
-  background-color: #154764;
-  /* Color de fondo más oscuro al hacer clic */
+  background-color: #4a241a;
+  /* Color de fondo más oscuro al hacer clic en modo oscuro */
   transform: translateY(0);
   /* Regresa a la posición original */
   box-shadow: 0 2px 0 #b8afaf;
+  /* Sombra del botón en modo oscuro */
 }

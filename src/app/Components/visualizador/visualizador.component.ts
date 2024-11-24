@@ -1,4 +1,3 @@
-import { NgStyle } from '@angular/common';
 import { Component, Input} from '@angular/core';
 
 @Component({
@@ -8,10 +7,10 @@ import { Component, Input} from '@angular/core';
   styleUrls: ['./visualizador.component.css']
 })
 export class VisualizadorComponent {
-  @Input() color: string = 'white';
-  @Input() size: number = 100;
-  @Input() email: string = '';
-  @Input() password: string = '';
-  @Input() text: string = '';
-  @Input() visualizadorMensaje: string = ''; // Añadido para mostrar el mensaje
+  @Input() color: string = 'white';           // Color de fondo del cuadro, por defecto blanco
+  @Input() size: number = 100;                 // Tamaño del cuadro, por defecto 100 píxeles
+  @Input() email: string = '';                 // Email ingresado por el usuario
+  @Input() password: string = '';              // Contraseña ingresada por el usuario
+  @Input() text: string = '';                  // Texto ingresado por el usuario
+  @Input() visualizadorMensaje: string = '';   // Mensaje que se mostrará en el cuadro
 }

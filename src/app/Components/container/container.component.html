@@ -1,31 +1,48 @@
-<div [ngClass]="{'dark-mode': isDarkMode}">
+<div [ngClass]="{'dark-mode': isDarkMode}"> <!-- ngClass para intercambiar al modo oscuro -->
+    <!-- Título principal -->
+    <h2>SUMATIVA</h2>
     <div class="envase">
         <div class="left-column">
+            <!-- Título para la sección de controles -->
             <h2>CONTROLES</h2>
             <div class="button-group">
                 <div class="button-row">
-                    <app-btn-primario (click)="changeColor() ; clearMessage()"></app-btn-primario>
+                    <!-- Botón primario que cambia el color y limpia el mensaje del visualizador -->
+                    <app-btn-primario (click)="changeColor(); clearMessage()"></app-btn-primario>
+                    <!-- Botón secundario que incrementa el tamaño del visualizador -->
                     <app-btn-secundario (click)="incrementSize()"></app-btn-secundario>
                 </div>
                 <div class="button-row">
+                    <!-- Botón de aceptar que muestra un mensaje de éxito -->
                     <app-btn-aceptar (click)="onAceptarClick()"></app-btn-aceptar>
+                    <!-- Botón de cancelar que muestra un mensaje de cancelación -->
                     <app-btn-cancelar (click)="onCancelarClick()"></app-btn-cancelar>
                 </div>
                 <div class="full-width-container">
+                    <!-- Botón para alternar entre modo oscuro y modo claro -->
                     <app-btn-night (click)="toggleDarkMode()"></app-btn-night> <!-- Botón nocturno -->
                 </div>
             </div>
             <div class="input-group">
                 <div>
+                    <!-- Componente para ingresar el email, emite un evento al cambiar -->
                     <app-email (emailChange)="onEmailChange($event)"></app-email>
                 </div>
+                <!-- Componente para ingresar la contraseña, emite un evento al cambiar -->
                 <app-password (passwordChange)="onPasswordChange($event)"></app-password>
+                <!-- Componente para ingresar texto, emite un evento al cambiar -->
                 <app-text (textChange)="onTextChange($event)"></app-text>
             </div>
         </div>
         <div class="right-column">
-            <app-visualizador [color]="visualizadorColor" [size]="size" [email]="email" [password]="password"
-                [text]="text" [visualizadorMensaje]="visualizadorMensaje">
+            <!-- Componente visualizador que muestra los datos ingresados y el mensaje -->
+            <app-visualizador 
+                [color]="visualizadorColor"  
+                [size]="size"                
+                [email]="email"           
+                [password]="password"         
+                [text]="text"            
+                [visualizadorMensaje]="visualizadorMensaje" > <!-- Variables ingresadas a Componente Visualizador -->
             </app-visualizador>
         </div>
     </div>

@@ -1,13 +1,15 @@
-<h2>Visualizador</h2>
-<div class="details">
-    <p>Email: {{ email }}</p>
-    <p>Password: {{ password }}</p>
-    <p>Texto: {{ text }}</p>
+<h2>VISUALIZADOR</h2> <!-- Título principal del visualizador -->
+<div class="details"> <!-- Contenedor para mostrar detalles -->
+    <p>Email: {{ email }}</p> <!-- Muestra el email ingresado -->
+    <p>Contraseña: {{ password }}</p> <!-- Muestra la contraseña ingresada -->
+    <p>Texto: {{ text }}</p> <!-- Muestra el texto ingresado -->
 </div>
 <!-- Cuadro que muestra el mensaje, separado del resto -->
-<div class="message-container">
-    <div class="message-box" [style.backgroundColor]="color" [style.width.px]="size" 
-    [style.height.px]="size">
-        <p>{{ visualizadorMensaje }}</p>
-    </div>
+<div class="message-container"> <!-- Contenedor para el cuadro del mensaje -->
+    <div class="message-box" 
+        [style.backgroundColor]="color"  
+        [style.width.px]="size"         
+        [style.height.px]="size">         
+        <p>{{ visualizadorMensaje }}</p> 
+    </div> <!-- Establece el color, tamaño y el mensaje del cuadrado visualizador -->
 </div>

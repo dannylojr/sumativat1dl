@@ -1,7 +1,7 @@
 /* Estilo para los inputs */
 input {
     border: 4px solid #28aabb;
-    /* Borde más oscuro para un look retro */
+    /* Borde inicial de color azul claro */
     border-radius: 5px;
     /* Bordes ligeramente redondeados */
     padding: 10px;
@@ -9,22 +9,22 @@ input {
     font-family: 'Press Start 2P', cursive;
     /* Fuente tipo pixel */
     background-color: #a8d5e2;
-    /* Color de fondo más suave */
+    /* Color de fondo suave */
     color: #333;
     /* Color del texto del input */
     width: 100%;
-    /* Asegurar que el input ocupe el ancho completo */
+    /* Asegura que el input ocupe el ancho completo */
     box-sizing: border-box;
-    /* Incluir padding y borde en el ancho total */
+    /* Incluye padding y borde en el ancho total */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     /* Transiciones suaves para borde y sombra */
     box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.5),
-        /* Sombra interna para el efecto de relieve */
+        /* Sombra interna para efecto de relieve */
         0 2px 5px rgba(0, 0, 0, 0.5);
-    /* Sombra externa para el efecto de relieve */
+    /* Sombra externa para efecto de relieve */
 }
 
-/* Eliminar el contorno por defecto */
+/* Eliminar el contorno por defecto al enfocar el input */
 input:focus {
     outline: none;
     /* Eliminar el contorno por defecto */
@@ -32,6 +32,12 @@ input:focus {
     /* Cambiar color del borde al enfocar */
     box-shadow: 0 0 10px #10dfc6;
     /* Agregar sombra al enfocar para mayor énfasis */
+}
+
+/* Estilo para el texto del placeholder */
+input::placeholder {
+    color: #7e6e6e;
+    /* Color del texto del placeholder */
 }
 
 /* Estilo para las etiquetas */
@@ -51,11 +57,11 @@ label {
 /* Estilo para mensajes de error */
 .error {
     color: #ff4444;
-    /* Color rojo más vibrante para mensajes de error */
+    /* Color rojo vibrante para mensajes de error */
     margin-top: 5px;
     /* Espacio superior para separar del input */
     display: inline-block;
-    /* Para que el fondo se ajuste al texto */
+    /* Ajustar el fondo al texto */
     font-family: 'Press Start 2P', cursive;
     /* Fuente tipo pixel */
     font-size: 12px;
@@ -70,6 +76,7 @@ label {
     /* Tamaño de fuente global */
 }
 
+/* Estilos en modo oscuro para inputs */
 :host-context(.dark-mode) input {
     background-color: #47758b;
     /* Fondo de entrada oscuro */
@@ -84,20 +91,26 @@ label {
     font-family: 'Press Start 2P', cursive;
     /* Fuente retro */
     box-shadow: inset 0 -2px 0 rgba(209, 205, 205, 0.5);
-    /* Sombra interna para el efecto de relieve */
+    /* Sombra interna para efecto de relieve */
 }
 
+/* Estilos en modo oscuro al enfocar el input */
 :host-context(.dark-mode) input:focus {
     outline: none;
     /* Eliminar el contorno por defecto */
     border-color: #88aec2;
     /* Cambiar color del borde al enfocar */
     box-shadow: 0 0 10px #88aec2;
-    ;
     /* Agregar sombra al enfocar para mayor énfasis */
 }
 
-/* Estilos para etiquetas en modo Game Boy */
+/* Estilo para el texto del placeholder en modo oscuro */
+:host-context(.dark-mode) input::placeholder {
+    color: #b6a4a4;
+    /* Color del texto del placeholder en modo oscuro */
+}
+
+/* Estilos para etiquetas en modo oscuro */
 :host-context(.dark-mode) label {
     color: #d3d3d3;
     /* Color de texto claro */

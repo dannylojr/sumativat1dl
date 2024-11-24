@@ -1,6 +1,8 @@
-<!-- src/app/Components/Inputs/email/email.component.html -->
 <div>
-    <label for="email">Email:</label>
-    <input type="email" class="email" (input)="onEmailInput($event)"/>
+    <label for="email">Email:</label> <!-- Etiqueta para el campo de entrada -->
+    <input id="email" type="email" class="email" placeholder="ejemplo@dominio.com" (input)="onEmailInput($event)"/>
+    <!-- Evento que llama a la función al ingresar texto -->
     <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    <!-- *ngIf: Muestra el mensaje solo si errorMessage tiene un valor -->
+    <!-- Mensaje de error mostrado si existe un error -->
 </div>

@@ -1,1 +1,5 @@
-<p (click)="onClick()">Modo Oscuro</p>
+<div class="toggle-container" (click)="onClick()">
+    <span class="icon sun">☀️</span>
+    <div class="toggle-bar" [class.active]="isDarkMode"></div>
+    <span class="icon moon">🌙</span>
+</div>
